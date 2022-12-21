@@ -55,3 +55,15 @@ console.log(newObj);
 let {objKey1: varA, objKey3:varB, ...newObj2} = obj2;
 console.log(varA);
 console.log(newObj2)
+
+// nested destructing
+
+const users = [
+    {id : 1, firstName : "Yansh"},
+    {id : 2, firstName : "Harshit"},
+    {id : 3, firstName : "Shivam"}
+]
+
+const [{firstName: user1firstname}, , {firstName: user3firstName}] = users;
+console.log(user1firstname);
+console.log(user3firstName);
