@@ -67,3 +67,38 @@ const users = [
 const [{firstName: user1firstname}, , {firstName: user3firstName}] = users;
 console.log(user1firstname);
 console.log(user3firstName);
+
+
+// clone using Object.assign
+const clonedObj = Object.assign({}, obj);
+console.log("cloned obj", clonedObj);
+console.log("original obj", obj);
+
+
+// optional chaining
+
+const userInfo = {
+    firstName : "Yansh",
+    // address : {
+    //     houseNo : 12,
+    //     street : "xyz"
+    // }
+}
+
+// console.log(userInfo.address.street) // give error if address not present
+console.log(userInfo?.address?.street); // check if data exist then do chaining else return undefined 
+
+
+// function inside object
+
+function personInfo(){
+    console.log(`person name is ${this.name} and age is ${this.age}`);
+}
+
+const personObj = {
+    name : "Yansh",
+    age : 12,
+    about : personInfo
+}
+
+personObj.about();

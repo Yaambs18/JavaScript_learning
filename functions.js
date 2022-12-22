@@ -139,3 +139,74 @@ function func1(){
 
 const op = func1();
 console.log(op());
+
+
+function about(hobby, gender){
+    console.log(this.name, this.age, hobby, gender);
+}
+
+const userObj1 = {
+    name : "harshit",
+    age : 8
+}
+const userObj2 = {
+    name : "Shivam",
+    age : 10
+}
+
+// call method
+about.call(userObj1, "playing", "male");
+about.call(userObj2, "listening", "male");
+
+// apply
+about.apply(userObj1, ["playing", "male"]);
+about.apply(userObj2, ["listening", "male"]);
+
+// bind
+const funct1 = about.bind(userObj1, ["playing", "male"]);
+const funct2 = about.bind(userObj2, ["listening", "male"]);
+
+funct1();
+funct2();
+
+// ----------------------------------------------
+const userMethods = {
+    about : function(){
+        return `user name is ${this.firstName}`;
+    },
+    is18 : function(){
+        return this.age >= 18;
+    }
+}
+
+function createUser(firstName, lastName, age, gender, email){
+    // const userByFunc = {};
+
+// use of Object.create -> to create an empty object
+    const userByFunc = Object.create(userMethods)
+    
+    userByFunc.firstName = firstName;
+    userByFunc.lastName = lastName;
+    userByFunc.age = age;
+    userByFunc.gender = gender;
+    userByFunc.email = email;
+
+    // userByFunc.about = function(){
+    //     return `user name is ${this.firstName}`;
+    // };
+    // userByFunc.is18 = function(){
+    //     return this.age >= 18;
+    // }
+
+    // userByFunc.about = userMethods.about;
+    // userByFunc.is18 = userMethods.is18;
+
+    return userByFunc;
+}
+
+const firstUser = createUser("yansh", "bhardwaj", 12, "male", "yb@gmail.com");
+const secondUser = createUser("yash", "bhardwaj", 21, "male", "yb@gmail.com");
+
+// console.log(firstUser.is18());
+console.log(firstUser.about());
+console.log(secondUser.about());
