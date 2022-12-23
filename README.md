@@ -1,1 +1,20 @@
-Practice codes for learning JavaScript
+Practice codes for learning JavaScript - 
+    - variables
+    - datatypes
+    - conditional statements
+    - loops
+    - arrays
+    - objects
+    - functions
+    - sets
+    - Map
+    - prototype
+    - classes
+    - getter setters
+    - javascript working
+        - Global execution context
+        - local execution context
+        - scope chaining
+        - closure
+    - DOM
+        -
