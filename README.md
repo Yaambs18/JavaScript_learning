@@ -17,4 +17,19 @@ Practice codes for learning JavaScript -
         - scope chaining
         - closure
     - DOM
-        -
+        - How JavaScripts work
+        - How JS code executes  -  Global Execution Context, LEC
+        - HOisting
+        - FEC
+        - Closures
+        - Creating webpage using HTML & CSS
+        - Async vs defer (linking of js in html)
+        - DOM
+        - getElementById, querySelector, ..... etc
+        - Change style of elements
+        - DOM Tree
+        - Traversal of DOM Tree
+        - classList - add, remove, toggle
+        - Add HTML
+        - createElement - append, prepend, remove, before, after
+        - Events -  eventListeners, event Object

@@ -28,7 +28,7 @@ a{
 .container{
     max-width: 1100px;
     margin: auto;
-    width: 90%;
+    width: 70%;
 }
 
 .nav{
@@ -72,8 +72,12 @@ a{
     text-align: center;
 }
 
+.bg-dark{
+    background: #000;
+    color: #eee;
+}
+
 .form-todo{
-    width: 70%;
     margin: auto;
     margin-top: 0.4rem;
     min-height: 5vh;
@@ -99,9 +103,18 @@ a{
     color: white;
     font-weight: bold;
 }
-
+.todo-list{
+    text-align: left;
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+.todo-list li{
+    padding: 0.5rem;
+    background: #444;
+    color: cyan;
+    margin-top: 0.5rem;
+}
 .section-signup{
-    width: 60%;
     margin: 1rem auto;
     text-align: center;
     background: rgb(148, 133, 133);
@@ -117,13 +130,16 @@ a{
 }
 
 .signup-form label{
+    margin: auto;
     display: block;
+    width: 80%;
 }
 
 .signup-form input{
+    margin: auto;
     padding: 0.3rem;
     display: block;
-    width: 100%;
+    width: 80%;
 }
 
 .form-group{
