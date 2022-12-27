@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <!-- <script src="./dom.js" defer></script> -->
     <!-- <script src="./dom_classes.js" defer></script> -->
-    <script src="./dom_events.js" defer></script>
+    <!-- <script src="./dom_events.js" defer></script> -->
+    <script src="./todo_form.js" defer></script>
     <title>To-Do</title>
 </head>
 <body>
@@ -27,16 +28,22 @@
     </header>
     <section class="todo-section container">
         <h2>Your plan for today ?</h2>
+
         <form class="form-todo" action="">
             <input type="text" name="" id="" placeholder="Add ToDo">
             <input type="submit" value="Add ToDo">
         </form>
+
         <ul class="todo-list">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
+            <li>
+                <span class="text">Task</span>
+                <div class="todo-buttons">
+                    <button class="todo-btn done">Done</button>
+                    <button class="todo-btn remove">Remove</button>
+                </div>
+            </li>
         </ul>
+        
     </section>
     <section class="section-signup container">
         <h2>Sign Up</h2>
